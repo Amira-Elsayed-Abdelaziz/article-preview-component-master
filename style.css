@@ -24,12 +24,17 @@ body {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: white;
     border-radius: 15px;
-    height: 500px;
+    width: 90%;
     max-width: 320px;
     min-width: 250px;
     box-shadow: 5px 5px 30px var(--Grayish-Blue);
+    margin: 0 auto;
+    height: 450px;
 
 }
 
@@ -74,7 +79,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* height: 25%; */
 
 }
 
@@ -117,18 +121,14 @@ h4 {
 .card-footer {
     position: relative;
     height: 80px;
-    /* justify-self: flex-end; */
-
 
 }
 
 .card-user {
     position: absolute;
-    /* display: flex; */
 
     width: 100%;
-    /* justify-content: space-between; */
-    /* z-index: -1; */
+
     height: 100%;
 }
 
@@ -138,24 +138,10 @@ h4 {
     background-color: var(--Very-Dark-Grayish-Blue);
     z-index: 100;
     height: 100%;
-    opacity: 1;
     border-radius: 0px 0px 15px 15px;
-    animation-name: vis;
-    animation-duration: 1s;
+
 }
 
-@keyframes vis {
-    0% {
-        visibility: hidden;
-        height: 0;
-    }
-
-    100% {
-        visibility: visible;
-        height: 100%;
-
-    }
-}
 
 .share-word {
     letter-spacing: 10px;
@@ -178,10 +164,70 @@ h4 {
 }
 
 .social-icon {
-    /* background-color: red; */
+
     width: 40%;
     display: flex;
     justify-content: space-evenly;
 }
 
-/* .card-social .share-icon  */
+
+
+@media (min-width: 375px) {
+    .card {
+        flex-direction: row;
+        max-width: 691px;
+        min-width: 691px;
+        height: 300px;
+    }
+
+    .card-img {
+        height: 100%;
+        width: 50%;
+    }
+
+    .card-img img {
+        border-radius: 15px 0px 0px 15px;
+
+    }
+
+    .card-details {
+        width: 50%;
+        height: 100%;
+    }
+
+    .user-avatar {
+        border-radius: 50%;
+        width: 20%;
+        height: 60%;
+
+    }
+
+    .card-social .share-icon {
+        display: none;
+    }
+
+    .card-social {
+        width: 80%;
+        border-radius: 10px 10px 10px 10px;
+        height: 60%;
+        top: -50px;
+        left: 30%;
+
+    }
+
+    .card-social::after {
+        position: absolute;
+        content: "";
+        border: 20px solid;
+        border-color: var(--Very-Dark-Grayish-Blue) transparent transparent transparent;
+        top: 40px;
+        left: 165px;
+
+    }
+
+    .social-icon {
+        width: 100%;
+    }
+
+
+}

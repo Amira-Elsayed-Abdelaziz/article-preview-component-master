@@ -120,7 +120,7 @@ h4 {
 
 .card-footer {
     position: relative;
-    height: 80px;
+    height: 25%;
 
 }
 
@@ -172,17 +172,16 @@ h4 {
 
 
 
-@media (min-width: 375px) {
+@media (min-width: 400px) {
     .card {
         flex-direction: row;
         max-width: 691px;
-        min-width: 691px;
         height: 300px;
     }
 
     .card-img {
         height: 100%;
-        width: 50%;
+        width: 40%;
     }
 
     .card-img img {
@@ -191,7 +190,7 @@ h4 {
     }
 
     .card-details {
-        width: 50%;
+        width: 60%;
         height: 100%;
     }
 
@@ -207,11 +206,16 @@ h4 {
     }
 
     .card-social {
+        display: flex;
+        justify-content: space-between;
+        min-width: 220px;
         width: 80%;
         border-radius: 10px 10px 10px 10px;
-        height: 60%;
-        top: -50px;
-        left: 30%;
+        height: 45px;
+        /* top: -50px; */
+        padding: 0 7%;
+        top: -50%;
+        left: 50%;
 
     }
 
@@ -220,13 +224,16 @@ h4 {
         content: "";
         border: 20px solid;
         border-color: var(--Very-Dark-Grayish-Blue) transparent transparent transparent;
-        top: 40px;
-        left: 165px;
+        /* border-color: red transparent transparent transparent; */
+        top: 90%;
+        left: 35%;
 
     }
 
     .social-icon {
-        width: 100%;
+width: 60%;
+        
+ /* background-color: red;        */
     }
 
 
